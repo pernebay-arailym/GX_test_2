@@ -12,3 +12,10 @@ data_assets = data_sources.add_dataframe_asset(name = "pd datafrmae asset")
 
 batch_definition = data_assets.add_batch_definition_whole_dataframe("batch definition")
 batch = batch_definition.add_batch(batch_parametres = {"dataframe": df})
+
+#create Expectations
+expectation = gx.expectations.ExpectColumnValuesToBeBetween(column = "passanger_count", min_value =2, max_value=6)
+
+#to get results
+validation_result = batch.validate(expectation)
+print(validation_result)

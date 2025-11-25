@@ -6,4 +6,4 @@ df = pd.read_csv(url)
 
 #count how many times the value 1 appears in the 'passanger_count' column
 count = (df['passenger_count']==1).sum()
-print("Number of occurances of '1' in 'passanger column':", count)
+print("Number of occurances of '1' in 'passenger column':", count)

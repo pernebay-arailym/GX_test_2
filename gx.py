@@ -8,13 +8,13 @@ context = gx.get_context()
 
 #connect data and create a Batch 
 data_sources = context.data_sources.add_pandas("pandas")
-data_assets = data_sources.add_dataframe_asset(name = "pd datafrmae asset")
+data_asset = data_sources.add_dataframe_asset(name = "pd dataframe asset")
 
-batch_definition = data_assets.add_batch_definition_whole_dataframe("batch definition")
-batch = batch_definition.add_batch(batch_parametres = {"dataframe": df})
+batch_definition = data_asset.add_batch_definition_whole_dataframe("batch definition")
+batch = batch_definition.get_batch(batch_parameters = {"dataframe": df})
 
 #create Expectations
-expectation = gx.expectations.ExpectColumnValuesToBeBetween(column = "passanger_count", min_value =2, max_value=6)
+expectation = gx.expectations.ExpectColumnValuesToBeBetween(column = "passenger_count", min_value =2, max_value=6)
 
 #to get results
 validation_result = batch.validate(expectation)

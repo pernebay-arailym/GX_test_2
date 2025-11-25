@@ -15,6 +15,8 @@ batch = batch_definition.get_batch(batch_parameters = {"dataframe": df})
 
 #create Expectations
 expectation = gx.expectations.ExpectColumnValuesToBeBetween(column = "passenger_count", min_value =2, max_value=6)
+#exp_2 = gx.expectations.ExpectColumnValuesToNotBeNull(column = "passenger_count")
+#exp_3 = gx.expectations.ExpectColumnValuesToBeUnique(column = "vendor_id")
 
 #to get results
 validation_result = batch.validate(expectation)

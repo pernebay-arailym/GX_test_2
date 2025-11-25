@@ -13,6 +13,7 @@ gx_test.expect_column_values_to_not_be_null(column = "vendor_id")
 gx_test.expect_column_values_to_be_unique(column= "vendor_id")
 gx_test.expect_column_values_to_be_in_set(column = "payment_type", value_set =[1,2,3,4,5])
 gx_test.expect_column_values_to_be_in_set(column= "pickup_location_id", value_set =[13] )
+gx_test.expect_column_to_exist(column = "trip_distance")
 
 #view results
 results = gx_test.validate()

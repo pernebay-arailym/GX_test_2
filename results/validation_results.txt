@@ -207,28 +207,46 @@
         "exception_message": null,
         "exception_traceback": null
       }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "expectation_type": "expect_column_to_exist",
+        "kwargs": {
+          "column": "trip_distance",
+          "result_format": "BASIC"
+        },
+        "meta": {}
+      },
+      "result": {},
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_message": null,
+        "exception_traceback": null
+      }
     }
   ],
   "evaluation_parameters": {},
   "statistics": {
-    "evaluated_expectations": 5,
-    "successful_expectations": 2,
+    "evaluated_expectations": 6,
+    "successful_expectations": 3,
     "unsuccessful_expectations": 3,
-    "success_percent": 40.0
+    "success_percent": 50.0
   },
   "meta": {
     "great_expectations_version": "0.17.23",
     "expectation_suite_name": "default",
     "run_id": {
       "run_name": null,
-      "run_time": "2025-11-25T16:22:52.416631+01:00"
+      "run_time": "2025-11-25T16:43:37.460902+01:00"
     },
     "batch_kwargs": {
-      "ge_batch_id": "9c0208a8-ca12-11f0-9750-361601229576"
+      "ge_batch_id": "821cbb6a-ca15-11f0-a79f-361601229576"
     },
     "batch_markers": {},
     "batch_parameters": {},
-    "validation_time": "20251125T152252.416576Z",
+    "validation_time": "20251125T154337.460856Z",
     "expectation_suite_meta": {
       "great_expectations_version": "0.17.23"
     }
